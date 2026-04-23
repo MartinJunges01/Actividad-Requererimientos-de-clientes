@@ -27,9 +27,13 @@ body {
 }
 
 header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 25px;
     background: linear-gradient(135deg, var(--celeste-4), var(--celeste-5));
     color: white;
-    text-align: center;
+    text-align: left;
     padding: 25px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
@@ -213,21 +217,39 @@ iframe {
     outline: none;
 }
 
-.top_confirmacion {
-    margin-top: 10px;
+.confirmacion-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
     text-align: center;
-    font-size: x-large;
 }
 
-#boton_reinicio {
-    margin-top: 10px;
-    text-align: center;
-    font-size: x-large;
-    margin: 0;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    margin-left: 45%;
+.confirmacion-card h1 {
+    color: var(--celeste-6);
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+.confirmacion-card>p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.confirmacion-card address {
+    margin: 25px 0;
+    font-style: normal;
+    font-size: 1.1em;
+    color: var(--celeste-6);
+}
+
+.confirmacion-card address p {
+    margin: 5px 0;
+    font-size: 1em;
 }
 
 .tabla_horarios {
@@ -263,7 +285,8 @@ iframe {
     color: var(--celeste-6);
     margin-bottom: 10px;
     padding: 0 10px;
-    margin-top: -10px; /* Adjust legend spacing */
+    margin-top: -10px;
+    /* Adjust legend spacing */
 }
 
 .form-group {
@@ -328,4 +351,24 @@ iframe {
     padding: 12px 30px;
     font-size: 1.1em;
     min-width: 150px;
+}
+
+#imagen {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.header-titles h1,
+.header-titles h2 {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+#nombre-empresa {
+    font-size: 4.5em;
+}
+
+#slogan {
+    font-size: 2em;
 }
