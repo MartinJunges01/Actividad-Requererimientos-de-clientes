@@ -1,22 +1,16 @@
-<!DOCTYPE html>
-<html lang="es">
+@extends('templates.base')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Talk</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
+@section('content')
     <div class="container">
 
         <header>
             <div id="imagen"><img src="Logo Global Talk.png" alt="Logo de Global Talk"></div>
-            
+
             <div class="header-titles">
                 <h2 id="slogan">Conectá con el mundo aprendiendo idiomas</h2>
+                <h2 id="slogan">Conectá con el mundo aprendiendo idiomas</h2>
                 <h1 id="nombre-empresa">Global Talk</h1>
+                <p class="mini-frase">Más de 20 años formando estudiantes</p>
                 <p class="mini-frase">Más de 20 años formando estudiantes</p>
             </div>
         </header>
@@ -63,8 +57,8 @@
 
             <section class="schedules-section">
                 <div class="text-center">
-                    <label for="sel_idioma"
-                        style="font-size: 1.2em; font-weight: bold; color: var(--celeste-6);">Selecciona tu
+                    <label for="sel_idioma" style="font-size: 1.2em; font-weight: bold; color: var(--celeste-6);">Selecciona
+                        tu
                         idioma</label>
                     <select name="sel_idioma" id="sel_idioma" class="styled-select">
                         <option value="">-- Seleccionar --</option>
@@ -253,11 +247,13 @@
             </section>
 
             <section id="form" class="form-section">
-                <iframe src="contacto.html" scrolling="no"></iframe>
+                <iframe src="{{ route('contacto') }}" scrolling="no"></iframe>
             </section>
         </main>
     </div>
+@endsection
 
+@section('footer')
     <footer>
         <p>&copy; 2026 Global Talk. Todos los derechos reservados.</p>
     </footer>
@@ -269,7 +265,7 @@
         // Ocultar los horarios por defecto al cargar la página
         divs.forEach(div => div.style.display = 'none');
 
-        select.addEventListener('change', function () {
+        select.addEventListener('change', function() {
             // Ocultar todos los divs
             divs.forEach(div => div.style.display = 'none');
 
@@ -283,6 +279,4 @@
             }
         });
     </script>
-</body>
-
-</html>
+@endsection
